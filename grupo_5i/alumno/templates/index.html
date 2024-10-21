@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <title>ALUMNOS</title>
+    </head>
+    <body>
+    <h1> LISTADO DE ALUMNOS </h1>
+    <hr>
+    <ul>
+        {%for i in misalumnos %}
+        <li> <a href="alumno/{{i.id}}">{{i.nombre}}</a></li>
+
+        {% endfor %}
+    </ul>
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>
